@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const distPath = "<dist-path>";
 
 const getVersionFromArgs = () => {
   const args = process.argv.slice(2);
@@ -18,7 +19,7 @@ const updateFileContent = (filePath, regex, replacement) => {
 };
 
 const version = getVersionFromArgs();
-const distPath = path.join(__dirname, "../Haj-Build/Test");
+const distPath = path.join(__dirname, distPath);
 
 const indexFilePath = path.join(distPath, "index.html");
 if (
